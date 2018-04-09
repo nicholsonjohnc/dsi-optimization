@@ -42,7 +42,7 @@ conda install -c conda-forge glpk
 
 ## Step 2 - Solve Deterministic Newsvendor
 
-![](../img/kahlua-peppermint-mocha.jpg)
+![](img/kahlua-peppermint-mocha.jpg)
 
 Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml, q, to make to minimize expected cost, 𝔼(C(q, d)), given certain demand, d = 8200, at the beginning of the holiday season.  Pernod Ricard sells Kahlua Peppermint Mocha 750 ml at price, p = 15.99, and they make Kahlua Peppermint Mocha 750 ml at cost, c = 7.99.  Bottles not sold during the holidays get marked down and eventually sell for salvage value, s = 6.99.
 
