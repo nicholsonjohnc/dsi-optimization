@@ -60,7 +60,7 @@ Note: D = [(5400, 0.1), (7800, 0.4), (8200, 0.5)] represents (demand, probabilit
 
 Finish implementing the objective_stochastic, model_stochastic, and solve_stochastic methods in the Newsvendor class.  Run the stochastic newsvendor problem.
 
-## Step 4 - Formulate and Solve Stochastic Newsvendor using Summation Notation (Extra Credit)
+## Step 4 - Generalize Stochastic Newsvendor using Summation Notation (Extra Credit)
 
 We may wish to consider many (demand, probability) pairs. Generalize your stochastic newsvendor problem so it can handle an arbitrary number of (demand, probability) pairs. You will need to use Pyomo's built in summation notation rather than a for loop, since Pyomo requires expressions it can take the derivative of. 
 
