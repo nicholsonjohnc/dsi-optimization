@@ -40,9 +40,21 @@ Now let's install a solver. [GLPK](https://www.gnu.org/software/glpk/) or GNU Li
 conda install -c conda-forge glpk
 ```
 
-## Step 2 - Complete Newsvendor Class
+## Step 2 - Solve Deterministic Newsvendor
 
-Finish implementing the objective_stochastic, model_stochastic, and solve_stochastic methods in the Newsvendor class.
+![](../img/kahlua-peppermint-mocha.jpg)
+
+Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml, q, to make to minimize expected cost, 𝔼(C(q, d)), given certain demand, d = 8200, at the beginning of the holiday season.  Pernod Ricard sells Kahlua Peppermint Mocha 750 ml at price, p = 15.99, and they make Kahlua Peppermint Mocha 750 ml at cost, c = 7.99.  Bottles not sold during the holidays get marked down and eventually sell for salvage value, s = 6.99.
+
+Run the deterministic newsvendor problem defined for you in newsvendor.py.
+
+## Step 3 - Formulate and Solve Stochastic Newsvendor
+
+Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml, q, to make to minimize expected cost, 𝔼(C(q, D)), given uncertain demand, D = [(5400, 0.1), (7800, 0.4), (8200, 0.5)], at the beginning of the holiday season.  Pernod Ricard sells Kahlua Peppermint Mocha 750 ml at price, p = 15.99, and they make Kahlua Peppermint Mocha 750 ml at cost, c = 7.99.  Bottles not sold during the holidays get marked down and eventually sell for salvage value, s = 6.99.
+
+Note: D = [(5400, 0.1), (7800, 0.4), (8200, 0.5)] represents (demand, probability) pairs. We could generate these pairs from a continuous or discrete distribution or any other applicable method so long as the sum of the probabilities (weights) equals 1.   
+
+Finish implementing the objective_stochastic, model_stochastic, and solve_stochastic methods in the Newsvendor class.  Run the stochastic newsvendor problem.
 
 
 
