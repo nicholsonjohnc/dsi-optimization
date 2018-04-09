@@ -1,7 +1,7 @@
 # DSI Optimization
 Optimization Lecture and Assignment - Galvanize Data Science Immersive (DSI)
 
-## Step 1 - Install Pyomo and Solvers
+## Step 1 - Install Pyomo and a Solver
 [Pyomo](http://www.pyomo.org/) is a Python-based, open-source optimization modeling language developed at Sandia National Laboratories.
 
 Optimization or Algebraic Modeling Languages (AMLs) allow us to formulate optimization problems in terms of our problem/business logic.  They provide a common interface to optimization solvers.  Also, they abstract away some of the complexities of formulating optimization problems (e.g. computing gradients of the objective and constraint functions with respect to the decision variables).
@@ -48,6 +48,8 @@ Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml
 
 Run the deterministic newsvendor problem defined for you in newsvendor.py.
 
+Try to understand the objective_deterministic, model_deterministic, and solve_deterministic methods in the Newsvendor class. Reference the [Pyomo Documentation](https://software.sandia.gov/downloads/pub/coopr/CooprGettingStarted.html).
+
 ## Step 3 - Formulate and Solve Stochastic Newsvendor
 
 Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml, q, to make to minimize expected cost, 𝔼(C(q, D)), given uncertain demand, D = [(5400, 0.1), (7800, 0.4), (8200, 0.5)], at the beginning of the holiday season.  Pernod Ricard sells Kahlua Peppermint Mocha 750 ml at price, p = 15.99, and they make Kahlua Peppermint Mocha 750 ml at cost, c = 7.99.  Bottles not sold during the holidays get marked down and eventually sell for salvage value, s = 6.99.
@@ -56,7 +58,9 @@ Note: D = [(5400, 0.1), (7800, 0.4), (8200, 0.5)] represents (demand, probabilit
 
 Finish implementing the objective_stochastic, model_stochastic, and solve_stochastic methods in the Newsvendor class.  Run the stochastic newsvendor problem.
 
+## Step 4 - Formulate and Solve Stochastic Newsvendor using Summation Notation (Extra Credit)
 
+We may wish to consider many (demand, probability) pairs. Generalize your stochastic newsvendor problem so it can handle an arbitrary number of (demand, probability) pairs. You will need to use Pyomo's built in summation notation rather than a for loop, since Pyomo requires expressions it can take the derivative of. 
 
 
 

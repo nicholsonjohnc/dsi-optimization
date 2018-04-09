@@ -32,8 +32,8 @@ class Newsvendor(object):
         model.overage_cost = Param(initialize=self.overage_cost, within=PositiveReals)
         model.demand = Param(initialize=demand, within=PositiveReals)
         
-        # Define our decision variable, inventory quantity.
-        # Only allow our decision variable to take on non-negative real, i.e. continuous, values.
+        # Define our decision variables, inventory quantity, s, and t.
+        # Only allow our decision variables to take on non-negative real, i.e. continuous, values.
         model.quantity = Var(initialize=self.quantity_start, domain=NonNegativeReals)
         model.s = Var(initialize=0, domain=NonNegativeReals)
         model.t = Var(initialize=0, domain=NonNegativeReals)
@@ -83,11 +83,11 @@ class Newsvendor(object):
 
         
 if __name__ == '__main__':
-    newsvendor = Newsvendor(price=150, cost=100, salvage_value=70, quantity_start=1)
-    model = newsvendor.model_deterministic(demand=3940)
+    newsvendor = Newsvendor(price=15.99, cost=7.99, salvage_value=6.99, quantity_start=5000)
+    model = newsvendor.model_deterministic(demand=8200)
     newsvendor.solve_deterministic(model)
     
-    # newsvendor = Newsvendor(price=150, cost=100, salvage_value=70, quantity_start=5000)
-    # model = newsvendor.model_stochastic(mu=3649, sigma=926)
+    # newsvendor = Newsvendor(price=15.99, cost=7.99, salvage_value=6.99, quantity_start=5000)
+    # model = newsvendor.model_stochastic(demand=[(5400, 0.1), (7800, 0.4), (8200, 0.5)])
     # newsvendor.solve_stochastic(model)
     
