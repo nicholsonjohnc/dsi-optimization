@@ -48,7 +48,9 @@ Pernod Ricard needs to choose how many bottles of Kahlua Peppermint Mocha 750 ml
 
 Run the deterministic newsvendor problem defined for you in newsvendor.py.
 
-Try to understand the objective_deterministic, model_deterministic, and solve_deterministic methods in the Newsvendor class. Reference the [Pyomo Documentation](http://www.pyomo.org/documentation/).
+Try to understand the objective_deterministic, model_deterministic, and solve_deterministic methods in the Newsvendor class. 
+
+Reference the [Pyomo Documentation](http://www.pyomo.org/documentation/).
 
 ## Step 3 - Formulate and Solve Stochastic Newsvendor
 
